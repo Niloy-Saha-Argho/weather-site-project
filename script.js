@@ -19,5 +19,33 @@ function WeatherData() {
       ).innerHTML = `${forecast.winddirection}°`;
     });
 }
+WeatherData();
+setInterval(WeatherData, 30000);
+
+function updateLiveTime() {
+  const now = new Date();
+
+  const day = now.toLocaleDateString("en-US", { weekday: "long" });
+  const date = now.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+  const time = now.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  });
+
+  document.getElementById(
+    "livedate"
+  ).textContent = `📅 ${day} | ${date} `;
+
+  document.getElementById("liveTime").textContent=`🕒 ${time}`
+}
+
+updateLiveTime();
+setInterval(updateLiveTime, 1000);
 
 
