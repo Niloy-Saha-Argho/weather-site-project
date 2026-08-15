@@ -26,7 +26,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   padding: 2rem;
-  width: 320px;
+  width: 540px;
   animation: popIn 1s ease;
   transition: all 0.3s ease;
 }
